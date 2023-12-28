@@ -5,7 +5,7 @@ const rutes = () => {
   return (
     <div className="p-4 ">
       <Routes>
-        <Route exact path="/goggl/" element={<Navigate replace to="/search" />}></Route>
+        <Route exact path="/goggl/" element={<Navigate replace to="/goggl/search" />}></Route>
         <Route exact path="/goggl/search" element={<Results />} />
         <Route exact path="/goggl/images" element={<Results />} />
         <Route exact path="/goggl/news" element={<Results />} />
