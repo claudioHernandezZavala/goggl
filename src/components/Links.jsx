@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
 const links = [
-  { url: '/search', text: '🔎 All' },
-  { url: '/images', text: '📷 Images' },
-  { url: '/videos', text: '🎞️ Videos' },
-  { url: '/news', text: '📰 News' },
+  { url: '/goggl/search', text: '🔎 All' },
+  { url: '/goggl/images', text: '📷 Images' },
+  { url: '/goggl/videos', text: '🎞️ Videos' },
+  { url: '/goggl/news', text: '📰 News' },
 ];
 
 const Links = () => {
