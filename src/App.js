@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState} from 'react'
+import {default as Navbar} from './components/Navbar'
+import { default as  Routes} from './components/rutes'
+import {default as  Footer} from './components/Footer'
 
-function App() {
+const App = () => {
+     const [darkTheme, setdarkTheme] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkTheme?'dark':''}>
+      <div className='bg-gray-300 dark:bg-gray-900 dark:test-gray-200 min-h-screen dark:text-white'>
+      <Navbar darkTheme={darkTheme} setdarkTheme={setdarkTheme}/>
+      <Routes/>
+      <Footer/>
+
+      </div>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
