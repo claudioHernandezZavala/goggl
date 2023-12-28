@@ -11,7 +11,7 @@ const Results = () => {
     if (searchTerm) {
       console.log(searchTerm);
       switch (location.pathname) {
-        case "/search":
+        case "/goggl/search":
           var body = JSON.stringify({
             text: searchTerm??"Google ",
             safesearch: "off",
@@ -22,7 +22,7 @@ const Results = () => {
           getResults(`/websearch`, "Javascript", body);
 
           break;
-        case "/videos":
+        case "/goggl/videos":
           var body = JSON.stringify({
             text: searchTerm??"Justin Bieber",
             safesearch: "off",
@@ -36,7 +36,7 @@ const Results = () => {
           getResults(`/videosearch`, "Javascript", body);
 
           break;
-        case "/images":
+        case "/goggl/images":
           var body = JSON.stringify({
             text: searchTerm?? "rose",
             safesearch: "off",
@@ -50,7 +50,7 @@ const Results = () => {
           getResults(`/imagesearch`, "Javascript", body);
 
           break;
-        case "/news":
+        case "/goggl/news":
           getResults(`/`, "Javascript");
 
           break;
@@ -62,7 +62,7 @@ const Results = () => {
   console.log("RESULT");
   console.log(results);
   switch (location.pathname) {
-    case "/search":
+    case "/goggl/search":
   return (
     <div className="flex flex-wrap justify-between space-y-6 sm:px-56">
       {results?.result?.map(({ href, title }, index) => (
@@ -80,7 +80,7 @@ const Results = () => {
     </div>
   );
 
-    case "/news":
+    case "/goggl/news":
       return (
         <div className="flex flex-wrap justify-between space-y-6 sm:px-56 items-center">
           {results?.result?.map(({ url, title, image }, index) => (
@@ -101,7 +101,7 @@ const Results = () => {
           ))}
         </div>
       );
-    case "/images":
+    case "/goggl/images":
       return (
         <div className="flex flex-wrap justify-center items-center">
           {results?.result?.map(({ image, url, title, index }) => (
@@ -125,7 +125,7 @@ const Results = () => {
         </div>
       );
 
-    case "/videos":
+    case "/goggl/videos":
       return (
         <div className="flex flex-wrap  ">
           {results?.result?.map(({ content, index, title ,description}) => (
