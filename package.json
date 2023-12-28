@@ -1,7 +1,7 @@
 {
   "name": "goggl",
   "version": "0.1.0",
-  "homepage": "https://tomerpacific.github.io/goggl/", 
+  "homepage": "https://claudiohernandezzavala.github.io/goggl/", 
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
